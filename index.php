@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<?php
+session_start()
+?>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Volta ao Mundo - Japão</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link href="css/estilo.css" rel="stylesheet" />
+    </head>
+
+    <body class="d-flex flex-column min-vh-100">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+                <a class="navbar-brand" href="index.php">Volta ao Mundo - Japão</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="inforgerais.php">Informações Gerais</a></li>
+                        <li class="nav-item"><a class="nav-link" href="cultura.php">Cultura</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pratos.php">Pratos Típicos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Pturisticos.php">Pontos Turísticos</a></li>
+                        <?php if(isset($_SESSION['admin']) && $_SESSION['admin'] == true): ?>
+                            <li class="nav-item"><a class="nav-link" href="pagina-admin.php">Administração</a></li>
+                            <li class="nav-item"><a class="nav-link" href="logout.php">Sair</a></li>
+                            <li class="nav-item"><a class="nav-link" href="novo-comentario.php">Comentar</a></li>
+
+                <?php elseif(isset($_SESSION['nome']) && $_SESSION['nome'] == true): ?>
+                    <li class="nav-item"><a class="nav-link" href="novo-comentario.php">Comentar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="logout.php">Sair</a></li>
+                <?php else: ?>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
+                <?php endif; ?>
+            </ul>
+        </div>
+    </nav>        <header>
+            <div id="meuCarrossel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/top1.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/top2.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/top3.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#meuCarrossel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#meuCarrossel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Próximo</span>
+                </button>
+        </div>
+                      </header>
+
+        <section id="about">
+            <div class="container px-8">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>BEM VINDO AO JAPÃO!</h2>
+                        <p class="lead">Aqui você descobrirá as principais características que faz do Japão um país singular que vale a pena ser visitado! </p>
+                        <ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="py-5 bg-dark mt-auto">        
+            <p class="m-0 text-center text-white">Copyright © Victor Chagas 2024</p>
+        </footer>
+             
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+
+    </body>
+</html>
