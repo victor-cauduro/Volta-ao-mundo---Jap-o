@@ -2,7 +2,7 @@ Projeto Volta ao Mundo
 
 Descrição
 
-Este projeto foi proposto pelo perojetor Junior Gonçalves do curso de DSM da Fatec Itapira. A proposta do projeto é
+Este projeto foi proposto pelo professor Junior Gonçalves do curso de DSM da Fatec Itapira. A proposta do projeto é
 a criação de um site sobre um país escolhido aleatoriamente,no caso deste projeto, foi sorteado o país Japão, detalhando
 as suas características e curiosidades.
 
